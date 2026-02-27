@@ -1,0 +1,76 @@
+:root {
+  --accent-color: #00d4ff;
+  --qoute-color:yellow;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(at top left, #1e1e2f, #0d0d0d);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.accent {
+  color: var(--accent-color);
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+.qoute{
+  color: var(--qoute-color);
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(251, 255, 0, 0.5);
+}
+
+.timer-grid {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.unit span {
+  font-size: 4rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums; 
+  display: block;
+}
+
+.unit p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+.separator {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+  .timer-grid { gap: 0.5rem; }
+  .unit span { font-size: 2rem; }
+  .separator { font-size: 1.5rem; }
+}
